@@ -20,86 +20,16 @@ export const en: SidebarConfig = {
       ],
     },
   ],
-  '/reference/': [
+  '/program/': [
     {
-      text: 'VuePress Reference',
+      text: 'program',
       children: [
-        '/reference/cli.md',
-        '/reference/config.md',
-        '/reference/frontmatter.md',
-        '/reference/components.md',
-        '/reference/plugin-api.md',
-        '/reference/theme-api.md',
-        '/reference/client-api.md',
-        '/reference/node-api.md',
-      ],
-    },
-  ],
-  '/reference/bundler/': [
-    {
-      text: 'Bundlers Reference',
-      children: ['/reference/bundler/webpack.md', '/reference/bundler/vite.md'],
-    },
-  ],
-  '/reference/default-theme/': [
-    {
-      text: 'Default Theme Reference',
-      children: [
-        '/reference/default-theme/config.md',
-        '/reference/default-theme/frontmatter.md',
-        '/reference/default-theme/components.md',
-        '/reference/default-theme/markdown.md',
-        '/reference/default-theme/styles.md',
-      ],
-    },
-  ],
-  '/reference/plugin/': [
-    {
-      text: 'Official Plugins Reference',
-      children: [
-        {
-          text: 'Common Features',
-          children: [
-            '/reference/plugin/back-to-top.md',
-            '/reference/plugin/container.md',
-            '/reference/plugin/google-analytics.md',
-            '/reference/plugin/medium-zoom.md',
-            '/reference/plugin/nprogress.md',
-            '/reference/plugin/register-components.md',
-          ],
-        },
-        {
-          text: 'Content Search',
-          children: [
-            '/reference/plugin/docsearch.md',
-            '/reference/plugin/search.md',
-          ],
-        },
-        {
-          text: 'PWA',
-          children: [
-            '/reference/plugin/pwa.md',
-            '/reference/plugin/pwa-popup.md',
-          ],
-        },
-        {
-          text: 'Syntax Highlighting',
-          children: [
-            '/reference/plugin/prismjs.md',
-            '/reference/plugin/shiki.md',
-          ],
-        },
-        {
-          text: 'Theme Development',
-          children: [
-            '/reference/plugin/active-header-links.md',
-            '/reference/plugin/debug.md',
-            '/reference/plugin/git.md',
-            '/reference/plugin/palette.md',
-            '/reference/plugin/theme-data.md',
-            '/reference/plugin/toc.md',
-          ],
-        },
+        '/program/README.md',
+        '/program/c++.md',
+        '/program/go.md',
+        '/program/java.md',
+        '/program/php.md',
+        '/program/python.md',
       ],
     },
   ],

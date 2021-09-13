@@ -63,7 +63,7 @@ export default defineUserConfig<DefaultThemeOptions>({
   themeConfig: {
     logo: '/images/hero.png',
 
-    repo: 'itnwork/itnwrok.github.io',
+    repo: 'itnwork/itnwork.github.io',
 
     // docsDir: 'docs',
 
