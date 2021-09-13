@@ -90,18 +90,16 @@ export const zh: NavbarConfig = [
     ],
   },
   {
-    text: '了解更多',
+    text: '程序',
     children: [
       {
-        text: '深入',
+        text: '语言',
         children: [
-          '/advanced/architecture.md',
-          '/advanced/plugin.md',
-          '/advanced/theme.md',
-          {
-            text: 'Cookbook',
-            link: '/advanced/cookbook/',
-          },
+          '/program/c++.md',
+          '/program/go.md',
+          '/program/java.md',
+          '/program/php.md',
+          '/program/python.md',
         ],
       },
       {
@@ -113,24 +111,6 @@ export const zh: NavbarConfig = [
             link: 'https://github.com/vuepress/awesome-vuepress',
           },
         ],
-      },
-    ],
-  },
-  {
-    text: `v${version}`,
-    children: [
-      {
-        text: '更新日志',
-        link:
-          'https://github.com/vuepress/vuepress-next/blob/main/CHANGELOG.md',
-      },
-      {
-        text: 'v1.x',
-        link: 'https://v1.vuepress.vuejs.org/',
-      },
-      {
-        text: 'v0.x',
-        link: 'https://v0.vuepress.vuejs.org/',
       },
     ],
   },

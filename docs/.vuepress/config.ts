@@ -63,9 +63,9 @@ export default defineUserConfig<DefaultThemeOptions>({
   themeConfig: {
     logo: '/images/hero.png',
 
-    repo: 'vuepress/vuepress-next',
+    repo: 'itnwork/itnwrok.github.io',
 
-    docsDir: 'docs',
+    // docsDir: 'docs',
 
     // theme-level locales config
     locales: {
