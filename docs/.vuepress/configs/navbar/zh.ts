@@ -3,8 +3,8 @@ import { version } from '../meta'
 
 export const zh: NavbarConfig = [
   {
-    text: '指南',
-    link: '/guide/',
+    text: `日志`,
+    link: '/blog/',
   },
   {
     text: '程序',
@@ -30,5 +30,13 @@ export const zh: NavbarConfig = [
         ],
       },
     ],
+  },
+  {
+    text: '本站指南',
+    link: '/guide/',
+  },
+  {
+    text: `关于我`,
+    link: '/about/',
   },
 ]
