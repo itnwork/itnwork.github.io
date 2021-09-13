@@ -1,3 +1,7 @@
+---
+sidebar: auto
+sidebarDepth: 2
+---
 # 关于我
 
 ## 联系方式

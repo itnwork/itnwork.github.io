@@ -3,6 +3,10 @@ import { version } from '../meta'
 
 export const zh: NavbarConfig = [
   {
+    text: `首页`,
+    link: '/',
+  },
+  {
     text: `日志`,
     link: '/blog/',
   },
