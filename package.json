@@ -1,20 +1,18 @@
 {
   "name": "itnwork.github.io",
   "version": "1.0.0",
-  "description": "",
+  "description": "itnwork.com",
   "main": "index.js",
+  "repository": "git@github.com:itnwork/itnwork.github.io.git",
+  "author": "itnwork <289702297@qq.com>",
+  "license": "MIT",
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
-  "author": "itnwork.com",
-  "license": "ISC",
   "devDependencies": {
-    "@commitlint/cli": "^13.1.0",
-    "@commitlint/config-conventional": "^13.1.0",
     "@vuepress/plugin-search": "^2.0.0-beta.26",
-    "package-name": "^0.1.0",
-    "typescript": "^4.3.5",
-    "vuepress": "^2.0.0-beta.25"
+    "typescript": "^4.4.3",
+    "vuepress": "^2.0.0-beta.26"
   }
 }
