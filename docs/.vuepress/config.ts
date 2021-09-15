@@ -105,4 +105,23 @@ export default defineUserConfig<DefaultThemeOptions>({
       },
     },
   },
+  plugins: [
+    [
+      '@vuepress/plugin-search',
+      {
+        // 排除首页
+        isSearchable: (page) => page.path !== '/',
+        // 允许搜索 Frontmatter 中的 `tags`
+        getExtraFields: (page) => page.frontmatter.tags ?? [],
+        locales: {
+          // '/': {
+          //   placeholder: 'Search',
+          // },
+          '/': {
+            placeholder: '搜索',
+          },
+        },
+      },
+    ],
+  ],
 })

@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
@@ -11,9 +10,10 @@
   "author": "itnwork.com",
   "license": "ISC",
   "devDependencies": {
-    "package-name": "^0.1.0",
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
+    "@vuepress/plugin-search": "^2.0.0-beta.26",
+    "package-name": "^0.1.0",
     "typescript": "^4.3.5",
     "vuepress": "^2.0.0-beta.25"
   }

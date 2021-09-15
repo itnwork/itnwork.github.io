@@ -1,3 +1,7 @@
+---
+sidebar: auto
+sidebarDepth: 3
+---
 ## 定时监测MySQL进程终止后自动重启的方法
 
 ## 前言
