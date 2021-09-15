@@ -42,7 +42,7 @@ jobs:
 
         # 如果缓存没有命中，安装依赖search
       - name: Install dependencie search
-        run: npm install -D @vuepress/plugin-search@next
+        run: npm install @vuepress/plugin-search@next
 
       # 运行构建脚本
       - name: Build VuePress site
