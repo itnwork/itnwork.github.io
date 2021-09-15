@@ -206,6 +206,17 @@ service cron restart
 ![img](https://raw.githubusercontent.com/chaojilaoshi/storage/main/images/1489065956935_9124_1489065958010.jpg)
 
 
+- 宝塔面板中设置定时任务解决
+
+```bash
+// 修复mysql异常
+pgrep -x mysqld &> /dev/null
+if [ $? -ne 0 ];then
+/etc/init.d/mysqld start 
+fi
+```
+
+
 ## 结语
 
 

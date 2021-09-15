@@ -36,8 +36,13 @@ jobs:
 
       # 如果缓存没有命中，安装依赖
       - name: Install dependencies
-        # if: steps.yarn-cache.outputs.cache-hit != 'true'
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn --frozen-lockfile
+
+
+        # 如果缓存没有命中，安装依赖search
+      - name: Install dependencie search
+        run: npm install -D @vuepress/plugin-search@next
 
       # 运行构建脚本
       - name: Build VuePress site
