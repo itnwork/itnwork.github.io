@@ -36,6 +36,10 @@ export const zh: NavbarConfig = [
     ],
   },
   {
+    text: `其他`,
+    link: '/other/',
+  },
+  {
     text: '本站指南',
     link: '/guide/',
   },
