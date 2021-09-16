@@ -8,7 +8,7 @@ sidebarDepth: 2
 
 微信：dachangit
 
-<img src="https://raw.githubusercontent.com/chaojilaoshi/storage/main/images/%E5%BE%AE%E4%BF%A1%E4%BA%8C%E7%BB%B4%E7%A0%81%20(2)%20(%E8%87%AA%E5%AE%9A%E4%B9%89).jpg" alt="微信二维码" />
+![微信二维码](https://cdn.jsdelivr.net/gh/chaojilaoshi/storage/images/%E5%BE%AE%E4%BF%A1%E4%BA%8C%E7%BB%B4%E7%A0%81%20(2)%20(%E8%87%AA%E5%AE%9A%E4%B9%89)-16317573335281.jpg)
 
 添加好友获取更多免费课程哦！🧧🧧🧧
 

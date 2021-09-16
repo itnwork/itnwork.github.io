@@ -48,6 +48,15 @@ jobs:
       - name: Build VuePress site
         run: yarn docs:build
 
+      # 进入生成的文件夹
+      - name: cd docs/.vuepress/dist
+        run: cd docs/.vuepress/dist
+
+      # 绑定自定义域名，根据个人实际域名修改。
+      # 如果不需要绑定自定义域名，可将下面这行代码注释掉，例如博主的是www.honkerzhou.com
+      - name: Write CNAME
+        run: echo 'doc.itnwork.com' > CNAME
+
       # 查看 workflow 的文档来获取更多信息
       # @see https://github.com/crazy-max/ghaction-github-pages
       - name: Deploy to GitHub Pages
