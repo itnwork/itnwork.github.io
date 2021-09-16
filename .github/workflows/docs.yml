@@ -39,23 +39,9 @@ jobs:
         if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn --frozen-lockfile
 
-
-      # 如果缓存没有命中，安装依赖search
-      # - name: Install dependencie search
-      #   run: yarn add -D @vuepress/plugin-search
-
       # 运行构建脚本
       - name: Build VuePress site
         run: yarn docs:build
-
-      # 进入生成的文件夹
-      - name: cd docs/.vuepress/dist
-        run: cd docs/.vuepress/dist
-
-      # 绑定自定义域名，根据个人实际域名修改。
-      # 如果不需要绑定自定义域名，可将下面这行代码注释掉，例如博主的是www.honkerzhou.com
-      - name: Write CNAME
-        run: echo 'doc.itnwork.com' > CNAME
 
       # 查看 workflow 的文档来获取更多信息
       # @see https://github.com/crazy-max/ghaction-github-pages
@@ -69,3 +55,14 @@ jobs:
         env:
           # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      # 切换分支
+      - name: Checkout gh-pages
+        uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+
+      # 绑定自定义域名，根据个人实际域名修改。
+      # 如果不需要绑定自定义域名，可将下面这行代码注释掉，例如博主的是www.honkerzhou.com
+      - name: Write CNAME
+        run: echo 'doc.itnwork.com' > CNAME
