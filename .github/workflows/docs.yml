@@ -52,17 +52,7 @@ jobs:
           target_branch: gh-pages
           # 部署目录为 VuePress 的默认输出目录
           build_dir: docs/.vuepress/dist
+          fqdn: doc.itnwork.com
         env:
           # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
-      # 切换分支
-      - name: Checkout gh-pages
-        uses: actions/checkout@v2
-        with:
-          ref: gh-pages
-
-      # 绑定自定义域名，根据个人实际域名修改。
-      # 如果不需要绑定自定义域名，可将下面这行代码注释掉，例如博主的是www.honkerzhou.com
-      - name: Write CNAME
-        run: echo 'doc.itnwork.com' > CNAME
