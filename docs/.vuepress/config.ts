@@ -65,7 +65,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 
     repo: 'itnwork/itnwork.github.io',
 
-    // docsDir: 'docs',
+    docsDir: 'docs',
 
     // theme-level locales config
     locales: {
