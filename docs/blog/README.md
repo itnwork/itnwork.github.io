@@ -1,8 +1,5 @@
----
-sidebar: auto
-sidebarDepth: 2
----
-## 日志博客
+
+# 日志简介
 
 ## 标题一
 

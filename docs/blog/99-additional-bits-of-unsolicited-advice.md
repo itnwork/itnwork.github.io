@@ -1,7 +1,4 @@
----
-sidebar: auto
-sidebarDepth: 2
----
+
 
 # 凯文·凯利（KK）99 条建议
 
