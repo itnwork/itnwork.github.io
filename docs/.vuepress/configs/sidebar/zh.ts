@@ -33,4 +33,13 @@ export const zh: SidebarConfig = {
       ],
     },
   ],
+  '/blog/': [
+    {
+      text: '日志',
+      children: [
+        '/blog/README.md',
+        '/blog/99-additional-bits-of-unsolicited-advice.md',
+      ],
+    },
+  ],
 }
