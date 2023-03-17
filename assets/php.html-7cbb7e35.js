@@ -1,0 +1,1 @@
+import{_ as t,p as a,q as c,Q as e,t as r}from"./framework-e921cdd2.js";const s={},o=e("h1",{id:"php网页开发",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#php网页开发","aria-hidden":"true"},"#"),r(" PHP网页开发")],-1),n=[o];function _(h,d){return a(),c("div",null,n)}const i=t(s,[["render",_],["__file","php.html.vue"]]);export{i as default};

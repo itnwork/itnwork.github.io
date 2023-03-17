@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-8363f89a","path":"/blog/99-additional-bits-of-unsolicited-advice.html","title":"凯文·凯利（KK）99 条建议","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1632280420000,"contributors":[{"name":"itnwork","email":"289702297@qq.com","commits":2}]},"filePathRelative":"blog/99-additional-bits-of-unsolicited-advice.md"}');export{t as data};

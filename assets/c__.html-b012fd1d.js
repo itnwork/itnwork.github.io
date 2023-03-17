@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-4d9b335a","path":"/program/c__.html","title":"C语言","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1631347957000,"contributors":[{"name":"itnwork","email":"289702297@qq.com","commits":1}]},"filePathRelative":"program/c++.md"}');export{t as data};

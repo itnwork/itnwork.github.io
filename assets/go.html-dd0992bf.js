@@ -1,0 +1,1 @@
+import{_ as t,p as o,q as a,Q as e,t as c}from"./framework-e921cdd2.js";const r={},s=e("h1",{id:"go语言",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#go语言","aria-hidden":"true"},"#"),c(" GO语言")],-1),n=[s];function _(d,i){return o(),a("div",null,n)}const l=t(r,[["render",_],["__file","go.html.vue"]]);export{l as default};
