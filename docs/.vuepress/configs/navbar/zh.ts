@@ -1,7 +1,6 @@
 import type { NavbarConfig } from '@vuepress/theme-default'
-import { version } from '../meta'
 
-export const zh: NavbarConfig = [
+export const navbarZh: NavbarConfig = [
   {
     text: `首页`,
     link: '/',

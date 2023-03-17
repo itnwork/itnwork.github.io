@@ -1,127 +1,105 @@
 import { defineUserConfig } from 'vuepress'
-import type { DefaultThemeOptions } from '@vuepress/theme-default'
-import { navbar, sidebar } from './configs'
+import { defaultTheme } from '@vuepress/theme-default'
+import { viteBundler } from '@vuepress/bundler-vite'
+import { getDirname, path } from '@vuepress/utils'
+import { searchPlugin } from '@vuepress/plugin-search'
+import {
+    head,
+    navbarZh,
+    sidebarZh,
+  } from './configs/index.js'
 
-export default defineUserConfig<DefaultThemeOptions>({
-  base: '/',
+const __dirname = getDirname(import.meta.url)
 
-  head: [
-    [
-      'link',
-      {
-        rel: 'icon',
-        type: 'image/png',
-        sizes: '16x16',
-        href: `/images/icons/favicon-16x16.png`,
-      },
-    ],
-    [
-      'link',
-      {
-        rel: 'icon',
-        type: 'image/png',
-        sizes: '32x32',
-        href: `/images/icons/favicon-32x32.png`,
-      },
-    ],
-    ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
-    ['meta', { name: 'application-name', content: 'VuePress' }],
-    ['meta', { name: 'apple-mobile-web-app-title', content: 'VuePress' }],
-    [
-      'meta',
-      { name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
-    ],
-    [
-      'link',
-      { rel: 'apple-touch-icon', href: `/images/icons/apple-touch-icon.png` },
-    ],
-    [
-      'link',
-      {
-        rel: 'mask-icon',
-        href: '/images/icons/safari-pinned-tab.svg',
-        color: '#3eaf7c',
-      },
-    ],
-    ['meta', { name: 'msapplication-TileColor', content: '#3eaf7c' }],
-    ['meta', { name: 'theme-color', content: '#3eaf7c' }],
-  ],
+export default defineUserConfig({
+    base: '/',
 
-  // site-level locales config
-  locales: {
-    '/': {
-      lang: 'zh-CN',
-      title: '艾特学苑',
-      description: 'Vue 驱动的静态网站生成器',
-    },
-  },
-
-  bundler:
-    // specify bundler via environment variable
-    '@vuepress/webpack',
-
-  themeConfig: {
-    logo: '/images/hero.png',
-
-    repo: 'itnwork/itnwork.github.io',
-
-    docsDir: 'docs',
-
-    // theme-level locales config
+    head,
+  
+    // site-level locales config
     locales: {
-      /**
-       * Chinese locale config
-       */
       '/': {
-        // navbar
-        navbar: navbar.zh,
-
-        // sidebar
-        sidebar: sidebar.zh,
-
-        // page meta
-        editLinkText: '在 GitHub 上编辑此页',
-        lastUpdatedText: '上次更新',
-        contributorsText: '贡献者',
-
-        // custom containers
-        tip: '提示',
-        warning: '注意',
-        danger: '警告',
-
-        // 404 page
-        notFound: [
-          '这里什么都没有',
-          '我们怎么到这来了？',
-          '这是一个 404 页面',
-          '看起来我们进入了错误的链接',
-        ],
-        backToHome: '返回首页',
-
-        // a11y
-        openInNewWindow: '在新窗口打开',
-        toggleDarkMode: '切换夜间模式',
-        toggleSidebar: '切换侧边栏',
+        lang: 'zh-CN',
+        title: '艾特学苑',
+        description: 'Vue 驱动的静态网站生成器',
       },
     },
-  },
-  plugins: [
-    [
-      '@vuepress/plugin-search',
-      {
-        // 排除首页
-        isSearchable: (page) => page.path !== '/',
-        // 允许搜索 Frontmatter 中的 `tags`
-        getExtraFields: (page) => page.frontmatter.tags ?? [],
+
+    bundler: viteBundler({
+        viteOptions: {},
+        vuePluginOptions: {},
+      }),
+
+    theme: defaultTheme({
+        // 在这里进行配置
+        logo: '/images/hero.png',
+
+        repo: 'itnwork/itnwork.github.io',
+
+        docsDir: 'docs',
+
+        // theme-level locales config
         locales: {
-          // '/': {
-          //   placeholder: 'Search',
-          // },
-          '/': {
-            placeholder: '搜索',
-          },
+        /**
+         * Chinese locale config
+         */
+        '/': {
+            // navbar
+            navbar: navbarZh,
+
+            // sidebar
+            sidebar: sidebarZh,
+
+            // page meta
+            editLinkText: '在 GitHub 上编辑此页',
+            lastUpdatedText: '上次更新',
+            contributorsText: '贡献者',
+
+            // custom containers
+            tip: '提示',
+            warning: '注意',
+            danger: '警告',
+
+            // 404 page
+            notFound: [
+            '这里什么都没有',
+            '我们怎么到这来了？',
+            '这是一个 404 页面',
+            '看起来我们进入了错误的链接',
+            ],
+            backToHome: '返回首页',
+
+            // a11y
+            openInNewWindow: '在新窗口打开',
+            toggleSidebar: '切换侧边栏',
+            },
         },
-      },
-    ],
-  ],
+    }),
+     // configure markdown
+    markdown: {
+        importCode: {
+        handleImportPath: (str) =>
+            str.replace(/^@vuepress/, path.resolve(__dirname, '../../ecosystem')),
+        },
+    },
+
+    plugins: [
+        searchPlugin({
+          // 配置项
+          // 排除首页
+          isSearchable: (page) => page.path !== '/',
+          // 允许搜索 Frontmatter 中的 `tags`
+        //   getExtraFields: (page) => page.frontmatter.tags ?? [],
+          locales: {
+            '/': {
+              placeholder: '搜索',
+            },
+          },
+        }),
+      ],
+
+    // registerComponentsPlugin({
+    //     componentsDir: path.resolve(__dirname, './components'),
+    // }),
+
 })

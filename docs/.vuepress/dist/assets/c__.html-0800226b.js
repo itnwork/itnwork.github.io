@@ -1,0 +1,1 @@
+import{_ as t,p as c,q as a,Q as e,t as _}from"./framework-e921cdd2.js";const r={},s=e("h1",{id:"c语言",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#c语言","aria-hidden":"true"},"#"),_(" C语言")],-1),o=[s];function n(d,i){return c(),a("div",null,o)}const l=t(r,[["render",n],["__file","c__.html.vue"]]);export{l as default};
